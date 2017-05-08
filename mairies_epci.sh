@@ -46,7 +46,7 @@ echo
 echo "### extraction des donnees"
 if [ ! $(tar -jxf "${ANNUAIRE_FILE_NAME}" --include "*/${MAIRIE_FILE_PATTERN}" --include "*/${EPCI_FILE_PATTERN}") == 0 ]
 then
-	echo "failed to exrtact data"
+	echo "failed to extract data"
 	exit
 fi
 
