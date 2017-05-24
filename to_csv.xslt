@@ -3,6 +3,9 @@
 <xsl:output method="text" encoding="UTF-8" doctype-public="-//W3C//DTD HTML 4.01//EN" doctype-system="http://www.w3.org/TR/html4/strict.dtd" indent="no"></xsl:output>
 <!-- template -->
 <xsl:template match="/">
+"<xsl:for-each select="Organisme"><xsl:value-of select="normalize-space(@id)"></xsl:value-of><xsl:if test="position() != last()">&#xA0;</xsl:if></xsl:for-each>",
+"<xsl:for-each select="Organisme"><xsl:value-of select="normalize-space(@codeInsee)"></xsl:value-of><xsl:if test="position() != last()">&#xA0;</xsl:if></xsl:for-each>",
+"<xsl:for-each select="Organisme"><xsl:value-of select="normalize-space(@dateMiseAJour)"></xsl:value-of><xsl:if test="position() != last()">&#xA0;</xsl:if></xsl:for-each>",
 "<xsl:for-each select="Organisme/Nom"><xsl:value-of select="normalize-space(.)"></xsl:value-of><xsl:if test="position() != last()">&#xA0;</xsl:if></xsl:for-each>",
 "<xsl:for-each select="Organisme/Adresse/Ligne"><xsl:value-of select="normalize-space(.)"></xsl:value-of><xsl:if test="position() != last()">&#xA0;</xsl:if></xsl:for-each>",
 "<xsl:for-each select="Organisme/Adresse/CodePostal"><xsl:value-of select="normalize-space(.)"></xsl:value-of><xsl:if test="position() != last()">&#xA0;</xsl:if></xsl:for-each>",
